@@ -74,7 +74,11 @@ def test_history_records_one_point_per_trade_actually_played():
 
 def test_the_strategy_name_is_carried_into_the_result():
     result = run_backtest(
-        FixedStakeStrategy(), outcomes=[True], starting_bankroll=1000, base_unit=10, payout_ratio=0.8
+        FixedStakeStrategy(),
+        outcomes=[True],
+        starting_bankroll=1000,
+        base_unit=10,
+        payout_ratio=0.8,
     )
 
     assert result.strategy_name == "fixed"
